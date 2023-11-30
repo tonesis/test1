@@ -1,7 +1,7 @@
 #!/bin/env bash
 #System Configure
 localtimzone=Kaliningrad
-ssh_port=2498
+ssh_port=2498#
 created_user=serviceuser
 
 #Install systemctl service
