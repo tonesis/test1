@@ -1,4 +1,6 @@
 #! /bin/env bash
+
+apt-get install wget -y
 echo "task 01"
 echo "Переменные скрипта"
 # Регион 
@@ -65,5 +67,9 @@ echo "start service"
 systemctl enable monit && systemctl start monit
 systemctl enable nginx && systemctl start nginx
 echo "done service start"
+echo "configure nginx/monit"
+cd /etc/nginx/conf.d/ && wget -y https://raw.githubusercontent.com/tonesis/test1/main/config/monit.conf
+cd /etc/monit/ && wget -y https://github.com/tonesis/test1/blob/main/config/monitrc
 echo "restart vm"
 shutdown -r now
+
