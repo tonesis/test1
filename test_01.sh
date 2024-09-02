@@ -69,6 +69,6 @@ systemctl enable nginx && systemctl start nginx
 echo "done service start"
 echo "configure nginx/monit"
 cd /etc/nginx/conf.d/ && wget  -O monit.conf https://raw.githubusercontent.com/tonesis/test1/main/config/monit.conf
-cd /etc/monit/ && wget -O monitrc https://raw.githubusercontent.com/tonesis/test1/main/config/monitrc && chmod 0600
+cd /etc/monit/ && wget -O monitrc https://raw.githubusercontent.com/tonesis/test1/main/config/monitrc && chmod 0600 monitrc
 echo "restart vm"
 shutdown -r now
