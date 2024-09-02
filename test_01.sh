@@ -31,7 +31,7 @@ timedatectl set-timezone Europe/Moscow
 echo "locale setting done"
 ##################################
 echo "ssh port configure systems"
-sed -i "s/#Port/Port $port_system/g" /etc/ssh/sshd_config
+sed -i "s/#Port.*/Port $port_system/g" /etc/ssh/sshd_config
 echo "sshd configure  is done"
 echo "restart ssh service"
 systemctl restart ssh
